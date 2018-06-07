@@ -1,0 +1,160 @@
+
+<html>
+
+<head>
+
+
+<title>Photos</title>
+
+<style type="text/css">
+body {background-color:#00CC99}
+
+/* settings for navbar */
+
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 100; 
+    right: 0;
+    overflow-x: hidden;
+    padding-top: 60px; <!--Place content 60px from the top-->
+    transition: 5s; <!--0.5 second transition effect to slide in the sidenav-->
+}
+
+
+/* settings for navbar text */
+
+.sidenav a {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 8px;
+    text-align: right;
+    text-decoration: none;
+    font-size: 25px;
+display: block;
+}
+
+/*settings for navbar text */
+
+.sidenav a:hover {
+    color: black;
+}
+
+  </style>
+
+<meta name="description" content="photos">
+<meta name="author" content="Louis Wai">
+
+</head>
+
+<body onload="return ran_col()">
+     
+<!--random color background-->
+        <script type="text/javascript">
+            function ran_col() { 
+                var color = '#'; 
+                var letters = ['00CC99','ffd633','ff80aa','809fff','66cc66','71dada','ffbf80','ff6666']; 
+                color += letters[Math.floor(Math.random() * letters.length)];
+                document.body.style.backgroundColor = color; 
+            }
+        </script>
+
+
+
+
+<!--menu button-->
+<p align=right>
+
+<input id="menubutton" 
+value="Menu . . ." 
+type="button" 
+onclick="openNav()"
+style="font-size:20px; color:white; background:black; border:1pt ridge black" >
+
+</p>
+
+
+
+
+
+<!--menu links-->
+<div id="mySidenav" class="sidenav">
+
+  <br>
+  <br>
+  <br>
+  <a href="../index.html">Home</a>
+<br>
+  <a href="/sanfrancisco.html">San Francisco</a>
+</div>
+
+
+<!--scripts for opening and closing menu-->
+<script type="text/javascript">
+function openNav() {
+    
+    document.getElementById("mySidenav").style.width = "225px";
+    document.getElementById("menubutton").onclick = function() {closeNav()};
+    document.getElementById("menubutton").value = "Close Menu . . .";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("menubutton").onclick = function() {openNav()};
+    document.getElementById("menubutton").value = "Menu . . .";
+}
+</script>
+
+
+<!--center black button-->
+<center> 
+<p style="font-size:40px">
+<form action="#">
+<input type="submit" 
+id="photosbutton" 
+style="font-size:300%; color:white; background:black; border:1pt ridge black; width:8em" 
+value="San Francisco"  
+onmouseover="this.value=''" onmouseout="this.value='San Francisco'" 
+/>
+</form>
+</center>
+
+<br>
+<br>
+<br>
+
+<!--photos-->
+<a href="../images/DSC00377.jpg" target="_blank">
+	<img src=../images/DSC00377.jpg style="height:300px;border:0;">
+</a>
+
+<a href="../images/DSC00379.jpg" target="_blank">
+	<img src=../images/DSC00379.jpg style="height:300px;border:0;">
+</a>
+
+<a href="../images/DSC00385.jpg" target="_blank">
+	<img src=../images/DSC00385.jpg style="height:300px;border:0;">
+</a>
+
+<a href="../images/DSC00394.jpg" target="_blank">
+	<img src=../images/DSC00394.jpg style="height:300px;border:0;">
+</a>
+
+<a href="../images/DSC00490.jpg" target="_blank">
+	<img src=../images/DSC00490.jpg style="height:300px;border:0;">
+</a>
+
+<a href="../images/DSC00513.jpg" target="_blank">
+	<img src=../images/DSC00513.jpg style="height:300px;border:0;">
+</a>
+
+<br>
+<b>
+<font size="2">
+All work is protected under the applicable copyright laws. &#169 2017 Louis Wai. 
+</font>
+</b> 
+</body>
