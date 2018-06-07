@@ -49,34 +49,16 @@ display: block;
 
 </head>
 
-<body onload="return start()">
-
+<body onload="return ran_col()">
      
         <script type="text/javascript">
-            
-function start() {
-ran_col();
-getip(son);
-}
-
-function ran_col() { 
+            function ran_col() { 
                 var color = '#'; 
                 var letters = ['00CC99','ffd633','ff80aa','809fff','66cc66','71dada','ffbf80','ff6666']; 
                 color += letters[Math.floor(Math.random() * letters.length)];
                 document.body.style.backgroundColor = color; 
             }
-
-
-function getip(json) {}
-
-
-
-</script>
-
-
-
-   
-
+        </script>
 
 <!--menu button-->
 <p align=right>
@@ -136,44 +118,6 @@ onmouseover="this.value=''" onmouseout="this.value='Louis&#8217; Photos'"
 </form>
 
 
-
-
-<script language="JavaScript">
-VIH_BackColor = "transparent";
-VIH_ForeColor = "transparent";
-VIH_FontPix = "0";
-VIH_DisplayFormat = "You are visiting from:<br>IP Address: %%IP%%<br>Host: %%HOST%%";
-VIH_DisplayOnPage = "yes";
-
-</script>
-<script language="JavaScript" src="http://scripts.hashemian.com/js/visitorIPHOST.js.php">
-</script>
-
-
-
-
-
-
-</script>
-
-
-
-<form action="https://docs.google.com/forms/d/1gehKrvz_sM40fDuFrXTCmYr7GwWNin6VXrsSw4O30R4/formResponse" method="POST" name="ss-formname" id="ss-form" onsubmit="" target="deadframe">
-
-
-<input type="hidden" name="entry.1105674260" class="ss-q-short" id="entry_1105674260">
-
-</form>
-
-<script>
-document.getElementById("entry_1105674260").value = VIH_HostIP
-</script>
-
-<script type="text/javascript">
-document.getElementById("ss-form").submit();
-
-</script>
-
   <br>
   <br>
   <br>
@@ -210,8 +154,5 @@ document.getElementById("ss-form").submit();
   <br>
   <br>
   <br>
-
-
-
 
 </body>
