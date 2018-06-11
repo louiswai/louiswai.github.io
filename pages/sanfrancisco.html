@@ -60,8 +60,8 @@ display: block;
 
 </head>
 
-<body onload="return ran_col()">
-     
+<body onload="ran_col()">
+    
 
 
 
@@ -128,78 +128,125 @@ value="San Francisco"
 <br>
 <br>
 
+<!--loading photos in order-->
+
+
+<script>
+
+var images = [
+'../thumbnails/DSC00377.jpg',
+'../thumbnails/DSC00379.jpg',
+'../thumbnails/DSC00385.jpg',
+'../thumbnails/DSC00394.jpg',
+'../thumbnails/DSC00490.jpg',
+'../thumbnails/DSC00513.jpg',
+'../thumbnails/DSC00529.jpg',
+'../thumbnails/DSC00550.jpg',
+'../thumbnails/DSC00553.jpg',
+'../thumbnails/DSC00559.jpg',
+'../thumbnails/DSC00561.jpg',
+'../thumbnails/DSC00565.jpg',
+'../thumbnails/DSC00585.jpg',
+'../thumbnails/DSC00597.jpg',
+'../thumbnails/DSC00603.jpg',
+'../thumbnails/DSC00641.jpg',
+'../thumbnails/DSC00706.jpg',
+'../thumbnails/DSC00717.jpg'
+
+], i = 0;
+
+
+function loadImageArrayAsync(){
+
+
+document.getElementById("img"+i).src = images[i];
+if (i++ < images.length - 1) loadImageArrayAsync();
+
+
+
+}
+
+window.onload = loadImageArrayAsync;
+
+</script>
+
+
+
 <!--photos-->
+
+
 <a href="../images/DSC00377.jpg" target="_blank">
-	<img src=../thumbnails/DSC00377.jpg style="height:300px;border:0;" alt="San Francisco Lands End Ocean">
+	<img id="img0" style="height:300px;border:0;" alt="San Francisco Lands End Ocean" />
 </a>
 
 <a href="../images/DSC00379.jpg" target="_blank">
-	<img src=../thumbnails/DSC00379.jpg style="height:300px;border:0;" alt="San Francisco Lands End Ocean">
+	<img id="img1" style="height:300px;border:0;" alt="San Francisco Lands End Ocean" />
 </a>
 
 <a href="../images/DSC00385.jpg" target="_blank">
-	<img src=../thumbnails/DSC00385.jpg style="height:300px;border:0;" alt="San Francisco Lands End Ocean">
+	<img id="img2" style="height:300px;border:0;" alt="San Francisco Lands End Ocean" />
 </a>
 
 <a href="../images/DSC00394.jpg" target="_blank">
-	<img src=../thumbnails/DSC00394.jpg style="height:300px;border:0;" alt="San Francisco Lands End Ocean and Island">
+	<img id="img3" style="height:300px;border:0;" alt="San Francisco Lands End Ocean and Island">
 </a>
 
 <a href="../images/DSC00490.jpg" target="_blank">
-	<img src=../thumbnails/DSC00490.jpg style="height:300px;border:0;" alt="San Francisco Financial District, Bay Bridge and SOMA">
+	<img id="img4" style="height:300px;border:0;" alt="San Francisco Financial District, Bay Bridge and SOMA">
 </a>
 
 <a href="../images/DSC00513.jpg" target="_blank">
-	<img src=../thumbnails/DSC00513.jpg style="height:300px;border:0;" alt="San Francisco Sail Boat, Sunset, and Bay Bridge">
+	<img id="img5" style="height:300px;border:0;" alt="San Francisco Sail Boat, Sunset, and Bay Bridge">
 </a>
 
 <a href="../images/DSC00529.jpg" target="_blank">
-	<img src=../thumbnails/DSC00529.jpg style="height:300px;border:0;" alt="San Francisco Alcatraz Island and Boat Cruise Tour">
+	<img id="img6" style="height:300px;border:0;" alt="San Francisco Alcatraz Island and Boat Cruise Tour">
 </a>
 
 <a href="../images/DSC00550.jpg" target="_blank">
-	<img src=../thumbnails/DSC00550.jpg style="height:300px;border:0;" alt="San Francisco Golden Gate Bridge and Sail Boats">
+	<img id="img7" style="height:300px;border:0;" alt="San Francisco Golden Gate Bridge and Sail Boats">
 </a>
 
 <a href="../images/DSC00553.jpg" target="_blank">
-	<img src=../thumbnails/DSC00553.jpg style="height:300px;border:0;" alt="San Francisco Tiburon">
+	<img id="img8" style="height:300px;border:0;" alt="San Francisco Tiburon">
 </a>
 
 <a href="../images/DSC00559.jpg" target="_blank">
-	<img src=../thumbnails/DSC00559.jpg style="height:300px;border:0;" alt="San Francisco Tiburon on Boat Cruise Tour">
+	<img id="img9" style="height:300px;border:0;" alt="San Francisco Tiburon on Boat Cruise Tour">
 </a>
 
 <a href="../images/DSC00561.jpg" target="_blank">
-	<img src=../thumbnails/DSC00561.jpg style="height:300px;border:0;" alt="San Francisco Golden Gate Bridge and Sail Boat">
+	<img id="img10" style="height:300px;border:0;" alt="San Francisco Golden Gate Bridge and Sail Boat">
 </a>
 
 <a href="../images/DSC00565.jpg" target="_blank">
-	<img src=../thumbnails/DSC00565.jpg style="height:300px;border:0;" alt="San Francisco Tiburon on Boat Cruise Tour">
+	<img id="img11" style="height:300px;border:0;" alt="San Francisco Tiburon on Boat Cruise Tour">
 </a>
 
 <a href="../images/DSC00585.jpg" target="_blank">
-	<img src=../thumbnails/DSC00585.jpg style="height:300px;border:0;" alt="San Francisco Tiburon on Boat Cruise Tour and Sunset ">
+	<img id="img12" style="height:300px;border:0;" alt="San Francisco Tiburon on Boat Cruise Tour and Sunset ">
 </a>
 
 <a href="../images/DSC00597.jpg" target="_blank">
-	<img src=../thumbnails/DSC00597.jpg style="height:300px;border:0;" alt="San Francisco Golden Gate Bridge and Sunset">
+	<img id="img13" style="height:300px;border:0;" alt="San Francisco Golden Gate Bridge and Sunset">
 </a>
 
 <a href="../images/DSC00603.jpg" target="_blank">
-	<img src=../thumbnails/DSC00603.jpg style="height:300px;border:0;" alt="San Francisco Sailboat, Financial District, SOMA, Bay Bridge, and Sunset">
+	<img id="img14" style="height:300px;border:0;" alt="San Francisco Sailboat, Financial District, SOMA, Bay Bridge, and Sunset">
 </a>
 
 <a href="../images/DSC00641.jpg" target="_blank">
-	<img src=../thumbnails/DSC00641.jpg style="height:300px;border:0;" alt="San Francisco Golden Gate Bridge">
+	<img id="img15" style="height:300px;border:0;" alt="San Francisco Golden Gate Bridge">
 </a>
 
 <a href="../images/DSC00706.jpg" target="_blank">
-	<img src=../thumbnails/DSC00706.jpg style="height:300px;border:0;" alt="San Francisco Golden Gate Bridge at Night">
+	<img id="img16" style="height:300px;border:0;" alt="San Francisco Golden Gate Bridge at Night">
 </a>
 
 <a href="../images/DSC00717.jpg" target="_blank">
-	<img src=../thumbnails/DSC00717.jpg style="height:300px;border:0;" alt="San Francisco Krispy Kreme Donut">
+	<img id="img17" style="height:300px;border:0;" alt="San Francisco Krispy Kreme Donut">
 </a>
+
 
 <br>
 <b>
