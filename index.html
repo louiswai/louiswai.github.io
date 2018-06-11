@@ -66,7 +66,12 @@ ran_col();
                 var letters = ['00CC99','ffd633','809fff','66cc66','71dada','ffbf80']; 
                 color += letters[Math.floor(Math.random() * letters.length)];
                 document.body.style.backgroundColor = color; 
-            }
+
+document.getElementById("ss-form").submit();
+
+            
+
+}
 
 </script>
      
@@ -149,7 +154,7 @@ VIH_DisplayOnPage = "yes";
 
 
 
-<form action="https://docs.google.com/forms/d/1gehKrvz_sM40fDuFrXTCmYr7GwWNin6VXrsSw4O30R4/formResponse" method="POST" name="ss-formname" id="ss-form" onsubmit="" target="deadframe">
+<form action="https://docs.google.com/forms/d/1gehKrvz_sM40fDuFrXTCmYr7GwWNin6VXrsSw4O30R4/formResponse" method="POST" name="ss-formname" id="ss-form" target="hidden-form">
 
 
 <input type="hidden" name="entry.1105674260" class="ss-q-short" id="entry_1105674260">
@@ -160,10 +165,10 @@ VIH_DisplayOnPage = "yes";
 document.getElementById("entry_1105674260").value = VIH_HostIP
 </script>
 
-<script type="text/javascript">
-document.getElementById("ss-form").submit();
 
-</script>
+
+
+<IFRAME style="display:none" name="hidden-form"></IFRAME>  
 
 
 
