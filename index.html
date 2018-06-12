@@ -1,4 +1,5 @@
 
+
 <html>
 
 <head>
@@ -56,22 +57,28 @@ display: block;
 <script type="text/javascript">
 
 function start() {
-ran_col();
 
+
+
+submitform();
+ran_col();
+getIP();
 }
 
+</script>
 
+
+<script>
             function ran_col() { 
                 var color = '#'; 
-                var letters = ['00CC99','ffd633','809fff','66cc66','71dada','ffbf80']; 
+                var letters = ['00CC99','FFBF00','809fff','66cc66','71dada','ffbf80']; 
                 color += letters[Math.floor(Math.random() * letters.length)];
                 document.body.style.backgroundColor = color; 
 
-document.getElementById("ss-form").submit();
-
-            
-
+           
 }
+
+
 
 </script>
      
@@ -134,38 +141,60 @@ value="Louis&#8217; Photos"
  />
 </form>
 
-<script language="JavaScript">
-VIH_BackColor = "black";
-VIH_ForeColor = "white";
-VIH_FontPix = "20";
-VIH_DisplayFormat = "You are visiting from:<br>IP Address: %%IP%%<br>Host: %%HOST%%";
-VIH_DisplayOnPage = "yes";
-
-</script>
-<script language="JavaScript" src="http://scripts.hashemian.com/js/visitorIPHOST.js.php">
+<!--
+<script language="JavaScript" src="https://api.ipify.org?format=json">
 </script>
 
+-->
 
 
 
-
-
-</script>
-
-
+<!--form for location-->
 
 <form action="https://docs.google.com/forms/d/1gehKrvz_sM40fDuFrXTCmYr7GwWNin6VXrsSw4O30R4/formResponse" method="POST" name="ss-formname" id="ss-form" target="hidden-form">
 
 
-<input type="hidden" name="entry.1105674260" class="ss-q-short" id="entry_1105674260">
+<input type="hidden" name="entry.1105674260" class="ss-q-short" id="entry_1105674260" value="empty">
 
 </form>
 
-<script>
-document.getElementById("entry_1105674260").value = VIH_HostIP
+
+
+
+
+
+<script type="application/javascript">
+
+function getIP(json) {
+
+document.getElementById("entry_1105674260").value = json.ip;
+
+}
+
 </script>
 
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 
+
+<script>
+function submitform() {
+
+var x = document.getElementById("entry_1105674260").value
+
+if (x === "empty")
+{
+
+setTimeout(submitform,3000);
+}
+
+else {
+document.getElementById("ss-form").submit(); 
+};
+
+
+}
+
+</script>
 
 
 <IFRAME style="display:none" name="hidden-form"></IFRAME>  

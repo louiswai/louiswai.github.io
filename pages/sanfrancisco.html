@@ -6,18 +6,10 @@
 
 <title>Photos</title>
 
-<!--random color background-->
-        <script type="text/javascript">
-            function ran_col() { 
-                var color = '#'; 
-                var letters = ['00CC99','ffd633','809fff','66cc66','71dada','ffbf80']; 
-                color += letters[Math.floor(Math.random() * letters.length)];
-                document.body.style.backgroundColor = color; 
-            }
-        </script>
+
 
 <style type="text/css">
-body {background-color:#00CC99}
+
 
 /* settings for navbar */
 
@@ -53,6 +45,9 @@ display: block;
     color: black;
 }
 
+
+
+
   </style>
 
 <meta name="description" content="photos">
@@ -60,11 +55,41 @@ display: block;
 
 </head>
 
-<body onload="ran_col()">
-    
+<body onload="return start()">
 
 
 
+
+<script>
+
+
+function start() {
+loadImageArrayAsync();
+ran_col();
+
+}
+
+</script>
+
+<script>
+
+
+
+
+function ran_col() { 
+var color = '#'; 
+var letters = ['00CC99','FFBF00','809fff','66cc66','71dada','ffbf80']; 
+color += letters[Math.floor(Math.random() * letters.length)];
+document.body.style.backgroundColor = color; 
+
+           
+}
+
+
+
+
+
+</script>
 
 
 <!--menu button-->
@@ -156,6 +181,7 @@ var images = [
 ], i = 0;
 
 
+
 function loadImageArrayAsync(){
 
 
@@ -165,8 +191,6 @@ if (i++ < images.length - 1) loadImageArrayAsync();
 
 
 }
-
-window.onload = loadImageArrayAsync;
 
 </script>
 
