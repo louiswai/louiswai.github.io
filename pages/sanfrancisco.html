@@ -1,6 +1,7 @@
 
 
 
+
 <html>
 
 <head>
@@ -22,7 +23,7 @@ text-decoration: none;
     height: 100%; 
     width: 0; 
     position: fixed; 
-    z-index: 1; 
+    z-index: 20; 
     top: 100; 
     right: 0;
     overflow-x: hidden;
@@ -84,7 +85,7 @@ transition: opacity 2s;
 }
 
 
-/* fade in scroll arrows */
+/* fade in scroll arrows -- removed
 
 .scrolldownclass {
 box-sizing: border-box;
@@ -95,13 +96,12 @@ box-sizing: border-box;
   border-width: 0px 25px 25px 0px;
   transform: rotate(45deg);
 z-index:11;
-
 position: fixed;
-top: 650px;
+top: 200px;
 left: 0;
 right: 0 ;
 margin: auto;
-opacity: 1;
+opacity: .6;
 transition: visibility 1s,opacity 1s;
 }
 
@@ -114,13 +114,12 @@ box-sizing: border-box;
   border-width: 0px 25px 25px 0px;
   transform: rotate(45deg);
 z-index:11;
-
 position: fixed;
-top: 800px;
+top: 400px;
 left: 0;
 right: 0 ;
 margin: auto;
-opacity: 1;
+opacity: .6;
 transition: visibility 1s,opacity 1s;
 }
 
@@ -133,15 +132,17 @@ box-sizing: border-box;
   border-width: 0px 25px 25px 0px;
   transform: rotate(45deg);
 z-index:11;
-
 position: fixed;
-top: 950px;
+top:600px;
 left: 0;
 right: 0 ;
 margin: auto;
-opacity: 1;
+opacity: .6;
 transition: visibility 1s,opacity 1s;
 }
+
+*/
+
 
 #contactinfo {
 position: fixed;
@@ -152,7 +153,7 @@ width: 100%;
 
 #title{
 
-top: 280px;
+top:0px;
 opacity: 1;
 visibility: visible;
 transition: visibility 1s,opacity 1s;
@@ -161,14 +162,13 @@ width: 100%;
 height: 100%;
 z-index:10; 
 text-align:center; 
-width:100%; 
 font-size:40px; 
 font-weight: bold; 
 font-family: Arial, sans-serif;
 background-image: url("../images/Golden Gate Bridge.gif");
 background-repeat:no-repeat;
-background-size: 100% ; 
-background-position: -10px -150px;
+background-size: 80% ; 
+background-position: 47.5%;
 }
 
 
@@ -301,7 +301,7 @@ document.getElementById("menubutton").style.border = "none"
 <input type="submit" 
 id="photosbutton" 
 style="font-size:300%; color:white; background:black; border:1pt ridge black; width:8em" 
-value="Louis&#8217; Photos"  
+value="San Francisco"  
 class="flat-btn"
  
 >
@@ -367,7 +367,6 @@ if (i++ < images.length - 1) {loadImageArrayAsync()};
 <h1> 
 <br>
 
-San Francisco
 </h1>
 </div>
 
