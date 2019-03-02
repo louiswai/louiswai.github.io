@@ -61,6 +61,47 @@ bottom:0;
 width: 100%;
 }
 
+/* hover text */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  left: 30%;
+  bottom: -50%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.imagehover:hover {
+    opacity: 0.4;
+}
+
+body { 
+  background-color: 8A8AE1
+}
+
+.bottombanner {
+  display:block;
+  margin-left: -10;
+  margin-right: -10;
+  width: 102%;
+}
   </style>
 
 <meta name="description" content="photos">
@@ -68,35 +109,17 @@ width: 100%;
 
 </head>
 
-<body onload="return start()">
-
-<script type="text/javascript">
-
-function start() {
+<body>
 
 
 
-submitform();
-ran_col();
-getIP();
-}
 
-</script>
-
-
-<script>
-            function ran_col() { 
-                var color = '#'; 
-                var letters = ['00CC99','FFBF00','809fff','66cc66','71dada','ffbf80']; 
-                color += letters[Math.floor(Math.random() * letters.length)];
-                document.body.style.backgroundColor = color; 
-
-           
-}
+<p style="font-size:40px; font-family:courier">
 
 
 
-</script>
+
+Louis's Page
      
 
 
@@ -143,7 +166,7 @@ style="text-align:center; font-size:20px; color:white; background:black; border:
 
 <div>
 <input id="contactinfo" 
-value="  Contact email: louiswai@outlook.com             &#169 2018 Louis Wai             Last updated: February 1, 2019             Number of photos: 27." 
+value="  Contact email: louiswai@outlook.com             &#169 2018-2019 Louis Wai             Last updated: February 1, 2019." 
 type="text"
 readonly 
 style="z-index:10; text-align:left; font-size:18px; font-weight: bold; font-style: italic; font-family: Arial, sans-serif; color:black; border:none; background:white; width: 120%; margin-left:-10px" >
@@ -168,19 +191,10 @@ function closeNav() {
 </script>
 
 
+
+
+
 <center> 
-<p style="font-size:40px">
-
-<form action="pages/sanfrancisco.html">
-<input type="submit" 
-id="photosbutton" 
-style="font-size:300%; color:white; background:black; border:1pt ridge black; width:8em" 
-value="Louis&#8217; Photos"  
-class="flat-btn"
-
-
- />
-</form>
 
 <!--
 <script language="JavaScript" src="https://api.ipify.org?format=json">
@@ -188,8 +202,38 @@ class="flat-btn"
 
 -->
 
+<br>
+
+<div class="tooltip">
+<a href="pages/photos.html">
+<div class="imagehover">
+<img src="button graphics/Camera.jpg" id="img0" style="width:100;" hspace="100">
+</div>
+</a>
+<span class="tooltiptext">Photos</span>
+</div>
 
 
+
+<div class="tooltip">
+<a href="pages/tools.html">
+<div class="imagehover">
+<img src="button graphics/Apps.jpg" id="img1" style="width:100;" hspace="100">
+</div>
+</a>
+<span class="tooltiptext">Tools</span>
+
+</div>
+
+<div class="tooltip">
+<a href="pages/graphics.html">
+<div class="imagehover">
+<img src="button graphics/Brush.jpg" id="img1" style="height:100;" hspace="100">
+</div>
+</a>
+<span class="tooltiptext">Graphics</span>
+
+</div>
 <!--form for location-->
 
 <form action="https://docs.google.com/forms/d/1gehKrvz_sM40fDuFrXTCmYr7GwWNin6VXrsSw4O30R4/formResponse" method="POST" name="ss-formname" id="ss-form" target="hidden-form">
@@ -248,9 +292,7 @@ document.getElementById("ss-form").submit();
 
   <br>
   <br>
-  <br>  
-  <br>
-  <br>
+
   <br>
   <br>  
   <br>
@@ -263,68 +305,10 @@ document.getElementById("ss-form").submit();
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>
+
+
+<img src="images/SF landmarks 2 small.jpg" class="bottombanner">
+
+
 
 </body>
