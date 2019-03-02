@@ -7,7 +7,7 @@
 <head>
 
 
-<title>Tools</title>
+<title>Graphics</title>
 
 
 
@@ -126,29 +126,25 @@ width: 100%;
   visibility: visible;
 }
 
-
 body { 
   background-color: 8A8AE1
 }
+
   </style>
 
-<meta name="description" content="photos">
+<meta name="description" content="graphics">
 <meta name="author" content="Louis Wai">
 
 </head>
 
 <body>
-
 <p style="font-size:40px; font-family:courier">
 
 
-Tools
+Graphics
 
 
 
-
-
-     
 
 
 <!--menu button-->
@@ -161,7 +157,6 @@ onclick="openNav()"
 style="font-size:20px; color:white; background: black; border:none; width: 25px; height: 25px" 
 class="flat-btn">
 </input>
-
 </span>
 
 <!--
@@ -211,14 +206,13 @@ style="text-align:center; font-size:20px; color:white; background:black; border:
   <a href="../pages/graphics.html">Graphics</a>
 <br>
 <div id="minornav" class="minornav">
-  <a href="../pages/Graphics/dimsum.html">Dim Sum</a>
+  <a href="Graphics/dimsum.html">Dim Sum</a>
 <br>
-  <a href="../pages/Graphics/characters.html">Characters</a>
+  <a href="Graphics/characters.html">Characters</a>
 <br>
-  <a href="../pages/Graphics/stationery.html">Stationery</a>
+  <a href="Graphics/stationery.html">Stationery</a>
 <br>
 </div>
-
 </div>
 
 
@@ -258,21 +252,47 @@ function closeNav() {
 
 
 
+
 <br>
 
 
 <div id="mainpage" class="mainpage">
 
-
-
 <div class="tooltip">
-<a href="../pages/Tools/Bluebook.html">
-	<img src="../button graphics/Bluebook.png" id="img0" style="height:150px;width:150px;" hspace="20">
+<a href="../pages/Graphics/dimsum.html">
+	<img src="../button graphics/Dim sum.png" id="img0" style="height:150px;width:150px;" hspace="20">
 </a>
-<span class="tooltiptext">Bluebook Table 6 Abbreviations Lookup</span>
+<span class="tooltiptext">Dim Sum</span>
 
 </div>
 
+<div class="tooltip">
+<a href="../pages/Graphics/characters.html">
+	<img src="../button graphics/Characters.png" id="img0" style="height:150px;width:150px;" hspace="20">
+</a>
+<span class="tooltiptext">Characters</span>
+
+</div>
+
+<div class="tooltip">
+<a href="../pages/Graphics/stationery.html">
+	<img src="../button graphics/Pencil.png" id="img0" style="height:150px;width:150px;" hspace="20">
+</a>
+<span class="tooltiptext">Stationery</span>
+
+</div>
+
+<div class="tooltip">
+<img src="../button graphics/empty.png" id="img0" style="height:150px;width:150px;" hspace="20">
+<span class="tooltiptext">Check back later</span>
+
+</div>
+
+<div class="tooltip">
+<img src="../button graphics/empty.png" id="img0" style="height:150px;width:150px;" hspace="20">
+<span class="tooltiptext">Check back later</span>
+
+</div>
 
 
 <div class="tooltip">
@@ -299,141 +319,5 @@ function closeNav() {
 
 
 
-<!--form for location-->
-
-<form action="https://docs.google.com/forms/d/1gehKrvz_sM40fDuFrXTCmYr7GwWNin6VXrsSw4O30R4/formResponse" method="POST" name="ss-formname" id="ss-form" target="hidden-form">
-
-
-<input type="hidden" name="entry.1105674260" class="ss-q-short" id="entry_1105674260" value="empty">
-
-</form>
-
-
-
-
-
-
-<script type="application/javascript">
-
-function getIP(json) {
-
-document.getElementById("entry_1105674260").value = json.ip;
-
-}
-
-</script>
-
-<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-
-
-<script>
-function submitform() {
-
-var x = document.getElementById("entry_1105674260").value
-
-if (x === "empty")
-{
-
-setTimeout(submitform,3000);
-}
-
-else {
-document.getElementById("ss-form").submit(); 
-};
-
-
-}
-
-</script>
-
-
-<IFRAME style="display:none" name="hidden-form"></IFRAME>  
-
-
-
-  <br>
-  <br>
-  <br>
-
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>  
-  <br>
-  <br>
-  <br>
-  <br>
 
 </body>
