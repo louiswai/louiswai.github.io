@@ -2013,59 +2013,6 @@ document.getElementById("printout").value = b;
 -->
 
 
-
-<!--form for location-->
-
-<form action="https://docs.google.com/forms/d/1gehKrvz_sM40fDuFrXTCmYr7GwWNin6VXrsSw4O30R4/formResponse" method="POST" name="ss-formname" id="ss-form" target="hidden-form">
-
-
-<input type="hidden" name="entry.1105674260" class="ss-q-short" id="entry_1105674260" value="empty">
-
-</form>
-
-
-
-
-
-
-<script type="application/javascript">
-
-function getIP(json) {
-
-document.getElementById("entry_1105674260").value = json.ip;
-
-}
-
-</script>
-
-<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-
-
-<script>
-function submitform() {
-
-var x = document.getElementById("entry_1105674260").value
-
-if (x === "empty")
-{
-
-setTimeout(submitform,3000);
-}
-
-else {
-document.getElementById("ss-form").submit(); 
-};
-
-
-}
-
-</script>
-
-
-<IFRAME style="display:none" name="hidden-form"></IFRAME>  
-
-
-
   <br>
 
 </body>
