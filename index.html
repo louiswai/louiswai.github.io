@@ -104,6 +104,27 @@ overflow-x: hidden;
   margin-right: -10;
   width: 102%;
 }
+
+/* hover to display about me*/
+
+.hide {
+  display: block;
+  color: 8A8AE1;
+  height: 90px;
+}
+    
+.aboutme {
+  display: block;
+  height: 60px;
+}
+
+.aboutme:hover + .hide {
+  display: block;
+  color: black;
+  height: 90px;
+}
+
+
   </style>
 
 <meta name="description" content="photos">
@@ -116,12 +137,10 @@ overflow-x: hidden;
 
 
 
-<p style="font-size:40px; font-family:courier">
 
+<div class="aboutme"><p style="font-size:40px; font-family:courier">Louis's Page</div>
 
-
-
-Louis's Page
+<div class="hide">Welcome to my site--this is a site I use to post some of my photos, graphics, and other things</div>
      
 
 
