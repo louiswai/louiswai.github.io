@@ -195,14 +195,14 @@ style="text-align:center; font-size:20px; color:white; background:black; border:
 
   <a href="../pages/tools.html">Tools</a>
 <br>
-<div id="minornav" class="minornav">
+<div id="minornav2" class="minornav">
   <a href="../Tools/Bluebook.html">BB Table 6</a>
 <br>
 
 </div>
   <a href="../pages/graphics.html">Graphics</a>
 <br>
-<div id="minornav" class="minornav">
+<div id="minornav3" class="minornav">
   <a href="../pages/Graphics/dimsum.html">Dim Sum</a>
 <br>
   <a href="../pages/Graphics/characters.html">Characters</a>
@@ -229,6 +229,8 @@ style="z-index:50; text-align:left; font-size:18px; font-weight: bold; font-styl
 function openNav() {
     document.getElementById("mySidenav").style.visibility = "visible";
     document.getElementById("minornav").style.visibility = "visible";
+    document.getElementById("minornav2").style.visibility = "visible";
+    document.getElementById("minornav3").style.visibility = "visible";
     document.getElementById("mySidenav").style.width = "25%";
     document.getElementById("menubutton").onclick = function() {closeNav()};
     document.getElementById("menubutton").value = "";
@@ -239,6 +241,8 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.visibility = "hidden";
     document.getElementById("minornav").style.visibility = "hidden";
+    document.getElementById("minornav2").style.visibility = "hidden";
+    document.getElementById("minornav3").style.visibility = "hidden";
     document.getElementById("mySidenav").style.width = "25%";
     document.getElementById("menubutton").onclick = function() {openNav()};
     document.getElementById("menubutton").value = "";
