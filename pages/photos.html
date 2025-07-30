@@ -226,7 +226,7 @@ style="z-index:50; text-align:left; font-size:18px; font-weight: bold; font-styl
 <!--scripts for opening and closing menu-->
 <script type="text/javascript">
 function openNav() {
-    
+    document.getElementById("mySidenav").style.visibility = "visible";
     document.getElementById("mySidenav").style.width = "25%";
     document.getElementById("menubutton").onclick = function() {closeNav()};
     document.getElementById("menubutton").value = "";
@@ -235,6 +235,7 @@ function openNav() {
 }
 
 function closeNav() {
+    document.getElementById("mySidenav").style.visibility = "hidden";
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("menubutton").onclick = function() {openNav()};
     document.getElementById("menubutton").value = "";
