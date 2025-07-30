@@ -23,14 +23,13 @@ text-decoration: none;
 
 .sidenav {
     visibility: hidden;
-    height: 100%; 
-    width: 0; 
+
     position: absolute; 
-    z-index: 20; 
-    top: 100; 
+
+
     right: 0;
     padding-top: 60px; <!--Place content 60px from the top-->
-    transition: 5s; <!--0.5 second transition effect to slide in the sidenav-->
+
 
 
 }
@@ -229,6 +228,7 @@ style="z-index:50; text-align:left; font-size:18px; font-weight: bold; font-styl
 <script type="text/javascript">
 function openNav() {
     document.getElementById("mySidenav").style.visibility = "visible";
+    document.getElementById("minornav").style.visibility = "visible";
     document.getElementById("mySidenav").style.width = "25%";
     document.getElementById("menubutton").onclick = function() {closeNav()};
     document.getElementById("menubutton").value = "";
@@ -238,6 +238,7 @@ function openNav() {
 
 function closeNav() {
     document.getElementById("mySidenav").style.visibility = "hidden";
+    document.getElementById("minornav").style.visibility = "hidden";
     document.getElementById("mySidenav").style.width = "25%";
     document.getElementById("menubutton").onclick = function() {openNav()};
     document.getElementById("menubutton").value = "";
