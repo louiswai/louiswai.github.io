@@ -153,7 +153,7 @@ overflow-x: hidden;
 
 <body onload="checkOrientation()">
 
-<div id="portraitOverlay">📱 Please rotate your phone to landscape orientation for this site 📱</div>
+<div id="portraitOverlay" style="text-align: center;">📱 Please rotate your phone to landscape orientation for this site 📱</div>
 
 
 <script>
@@ -168,7 +168,7 @@ function checkOrientation() {
       }
     }
 
-    // Optional: update overlay when orientation or size changes
+    // update overlay when orientation or size changes
     window.addEventListener("resize", checkOrientation);
     window.addEventListener("orientationchange", checkOrientation);
   </script>
