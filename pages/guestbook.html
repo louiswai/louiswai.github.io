@@ -177,7 +177,7 @@ class="flat-btn">
 
 
 <!--menu links-->
-<div id="mySidenav" class="sidenav" style="z-index: 5;">
+<div id="mySidenav" class="sidenav" style="z-index: 100; width: 25%">
 
   <br>
   <br>
@@ -195,31 +195,16 @@ class="flat-btn">
   <a href="../pages/Photos/saki.html">Saki</a>
 <br>
 </div>
-
-  <a href="../pages/tools.html">Tools</a>
-<br>
-<div id="minornav2" class="minornav">
-  <a href="../Tools/Bluebook.html">BB Table 6</a>
+  <a href="../pages/guestbook.html">Guest Book</a>
 <br>
 
-</div>
-  <a href="../pages/graphics.html">Graphics</a>
-<br>
-<div id="minornav3" class="minornav">
-  <a href="../pages/Graphics/dimsum.html">Dim Sum</a>
-<br>
-  <a href="../pages/Graphics/characters.html">Characters</a>
-<br>
-  <a href="../pages/Graphics/stationery.html">Stationery</a>
-<br>
-</div>
 
 </div>
 
 
 <div>
 <input id="contactinfo" 
-value="  Contact email: louiswai@outlook.com             &#169 2018-2019 Louis Wai." 
+value="  Contact email: louiswai@outlook.com             &#169 2018-2025 Louis Wai." 
 type="text"
 readonly 
 style="z-index:50; text-align:left; font-size:18px; font-weight: bold; font-style: italic; font-family: Arial, sans-serif; color:black; border:none; background:white; width: 120%; margin-left:-10px" >
@@ -232,8 +217,6 @@ style="z-index:50; text-align:left; font-size:18px; font-weight: bold; font-styl
 function openNav() {
     document.getElementById("mySidenav").style.visibility = "visible";
     document.getElementById("minornav").style.visibility = "visible";
-    document.getElementById("minornav2").style.visibility = "visible";
-    document.getElementById("minornav3").style.visibility = "visible";
     document.getElementById("mySidenav").style.width = "25%";
     document.getElementById("menubutton").onclick = function() {closeNav()};
     document.getElementById("menubutton").value = "";
@@ -244,8 +227,6 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.visibility = "hidden";
     document.getElementById("minornav").style.visibility = "hidden";
-    document.getElementById("minornav2").style.visibility = "hidden";
-    document.getElementById("minornav3").style.visibility = "hidden";
     document.getElementById("mySidenav").style.width = "25%";
     document.getElementById("menubutton").onclick = function() {openNav()};
     document.getElementById("menubutton").value = "";
