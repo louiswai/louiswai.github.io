@@ -14,6 +14,23 @@
 
 <style type="text/css">
 
+/* settings for portrait orientation overlay */
+
+#portraitOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    z-index: 9999;
+  }
+
 /* settings for navbar */
 
 .sidenav {
@@ -134,15 +151,34 @@ overflow-x: hidden;
 
 </head>
 
-<body onload="submitform()">
+<body onload="checkOrientation()">
 
+<div id="portraitOverlay">📱 Rotate your phone to landscape orientation for this site </div>
+
+
+<script>
+function checkOrientation() {
+      const overlay = document.getElementById("portraitOverlay");
+      const isPortrait = window.innerHeight > window.innerWidth;
+
+      if (isPortrait) {
+        overlay.style.display = "flex";
+      } else {
+        overlay.style.display = "none";
+      }
+    }
+
+    // Optional: update overlay when orientation or size changes
+    window.addEventListener("resize", checkOrientation);
+    window.addEventListener("orientationchange", checkOrientation);
+  </script>
 
 
 
 
 <div class="aboutme"><p style="font-size:40px; font-family:courier">Louis's Page</div>
 
-<div class="hide">Welcome to my site--I use this site to post photos, graphics, and other things</div>
+<div class="hide">Welcome to my site</div>
      
 
 
@@ -219,11 +255,7 @@ function closeNav() {
 
 <center> 
 
-<!--
-<script language="JavaScript" src="https://api.ipify.org?format=json">
-</script>
 
--->
 
 <br>
 
@@ -239,76 +271,17 @@ function closeNav() {
 
 
 <div class="tooltip">
-<a href="pages/tools.html">
+<a href="pages/guestbook.html">
 <div class="imagehover">
-<img src="button graphics/Apps.jpg" id="img1" style="width:100;" hspace="100">
+<img src="button graphics/pencil.jpg" id="img1" style="width:100;" hspace="100">
 </div>
 </a>
-<span class="tooltiptext">Tools</span>
+<span class="tooltiptext">Guest Book</span>
 
 </div>
 
-<div class="tooltip">
-<a href="pages/graphics.html">
-<div class="imagehover">
-<img src="button graphics/Brush.jpg" id="img1" style="height:100;" hspace="100">
-</div>
-</a>
-<span class="tooltiptext">Graphics</span>
-
-</div>
-    
-<!--form for location-->
-<!--getting location info not active
-<form action="https://docs.google.com/forms/d/1gehKrvz_sM40fDuFrXTCmYr7GwWNin6VXrsSw4O30R4/formResponse" method="POST" name="ss-formname" id="ss-form" target="hidden-form">
 
 
-<input type="hidden" name="entry.1105674260" class="ss-q-short" id="entry_1105674260" value="empty">
-
-</form>
-
-
-
-
-
-
-<script type="application/javascript">
-
-function getIP(json) {
-
-document.getElementById("entry_1105674260").value = json.ip;
-
-}
-
-</script>
-
-<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-
-
-<script>
-function submitform() {
-
-var x = document.getElementById("entry_1105674260").value
-
-if (x === "empty")
-{
-
-setTimeout(submitform,3000);
-}
-
-else {
-document.getElementById("ss-form").submit(); 
-};
-
-
-}
-
-</script>
-
-
-<IFRAME style="display:none" name="hidden-form"></IFRAME>  
-
--->
 
 
   <br>
