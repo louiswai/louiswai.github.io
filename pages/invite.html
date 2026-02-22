@@ -1,0 +1,190 @@
+
+
+
+
+<html>
+
+<head>
+
+
+<title>Grey's Birthday Party</title>
+
+
+
+<style type="text/css">
+
+
+
+/* remove ios button styles */
+
+.flat-btn {
+-webkit-appearance: none;
+border-radius: 0;
+}
+
+#contactinfo {
+position: fixed;
+bottom:0;
+width: 100%;
+}
+
+/* hover text */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+ 
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+body { 
+  background-color: 8A8AE1;
+height: 100vh; 
+	
+
+}
+
+
+
+    .block {
+      height: 100vh;
+      background: white;
+      border-bottom: 1px solid #eee;
+      visibility: hidden;
+    }
+
+  </style>
+
+
+
+</head>
+
+<body>
+
+<p style="font-size:40px; font-family:courier">
+
+
+Grey's Birthday Party
+
+
+
+
+
+
+</p>
+
+
+
+
+
+
+
+<div id="contactinfo"
+     style="z-index:10; text-align:left; font-size:18px; font-weight:bold; 
+            font-style:italic; font-family:Arial, sans-serif; color:black; 
+            border:none; background:white; width:120%; margin-left:-10px; padding:4px 6px;">
+  
+  <a href="mailto:malt.terrier.1r@icloud.com" style="color:black; text-decoration:underline;">
+    Email Louis here
+  </a>
+
+</div>
+
+
+
+<center> 
+<p style="font-size:40px">
+
+
+
+<br>
+
+
+
+
+
+
+
+<div id="mainpage" class="mainpage" style="width: 500px; height: 55vh; overflow: hidden; font-family:courier;">
+
+<!--form for posting comment-->
+
+
+<form action=https://docs.google.com/forms/d/e/1FAIpQLScilv7M88wUSrzC3awxnOkVDPtiO_L63pTqcZrJPMHS3fvvmQ/formResponse?pli=1" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+
+How many people will attend? <br>
+  <input type="text" name="entry.689088212" id="Number" placeholder="Enter a number">
+
+<br><br>
+What are the names of attendees? <br>
+  <input type="text" name="entry.794166339" id="Attendees" placeholder="Adult 1; Adult 2; Child 1; etc">
+<br>
+<br>
+  <input type="submit" value="RSVP!" style="color:white; background:black; border:0pt" onclick="clearInput()">
+</form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+  <script>
+    function clearInput() {
+
+  const attendees = document.getElementById("Attendees");
+  const number = document.getElementById("Number");
+
+if (attendees.value.trim() !== "" && number.value.trim() !== "") {
+
+    setTimeout(() => {
+      attendees.value = "";
+      number.value = "";
+    }, 200);
+
+    alert("Thank you for RSVP-ing. The RSVP list below takes 5 minutes to update.");
+
+    setTimeout(() => {
+      location.reload();
+    }, 250000);
+
+  } else {
+    alert("Please provide both the number of attendees and the names of the attendees.");
+  }
+
+    
+    }
+  </script>
+
+<br>
+<br>
+
+<iframe 
+width="518px" 
+height="1000%" 
+frameborder="0"
+style="background: 8A8AE1; overflow-x: hidden; border: none;"
+
+
+
+src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTmOMkiIZTtSEOkSkIxVadfUnBeb6JXVmkRcafULg88bZN3Kk2Ra0yzDKhdLqcpbx31u7piBV-HtnpH/pubhtml?gid=490628751&amp;range=A1:C1000&amp;single=true&amp;widget=true&amp;headers=false&amp;chrome=false"
+
+></iframe>
+
+
+</div>
+</center>
+ 
+
+</body>
