@@ -28,29 +28,8 @@ bottom:0;
 width: 100%;
 }
 
-/* hover text */
 
-.tooltip {
-  position: relative;
-  display: inline-block;
 
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-
- 
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
 
 body { 
   background-color: 8A8AE1;
@@ -66,6 +45,29 @@ height: 100vh;
       background: white;
       border-bottom: 1px solid #eee;
       visibility: hidden;
+    }
+
+
+/* text box style */
+
+input[type="text"] {
+      width: 80vw;        /* 80% of the iPhone screen width */
+      height: 12vw;       /* Height also scales with screen width */
+      font-size: 5vw;     /* Text scales with screen width */
+      padding: 2vw;
+      border: 2px solid #333;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+input[type="submit"] {
+      width: 80vw;        /* 80% of the iPhone screen width */
+      height: 12vw;       /* Height also scales with screen width */
+      font-size: 5vw;     /* Text scales with screen width */
+      padding: 2vw;
+      border: 2px solid #333;
+      border-radius: 10px;
+      box-sizing: border-box;
     }
 
   </style>
@@ -108,7 +110,7 @@ Grey's Birthday Party
 
 
 <center> 
-<p style="font-size:40px">
+<p style="font-size:80px">
 
 
 
@@ -120,12 +122,12 @@ Grey's Birthday Party
 
 
 
-<div id="mainpage" class="mainpage" style="width: 500px; height: 55vh; overflow: hidden; font-family:courier;">
+<div id="mainpage" class="mainpage" font-family:courier; font-size:80px">
 
 <!--form for posting comment-->
 
 
-<form action=https://docs.google.com/forms/d/e/1FAIpQLScilv7M88wUSrzC3awxnOkVDPtiO_L63pTqcZrJPMHS3fvvmQ/formResponse?pli=1" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+<form action=https://docs.google.com/forms/d/e/1FAIpQLScilv7M88wUSrzC3awxnOkVDPtiO_L63pTqcZrJPMHS3fvvmQ/formResponse?pli=1" method="POST" target="hidden_iframe" onsubmit="submitted=true;" style="font-size: 40px;">
 
 How many people will attend? <br>
   <input type="text" name="entry.689088212" id="Number" placeholder="Enter a number">
@@ -137,6 +139,8 @@ What are the names of attendees? <br>
 <br>
   <input type="submit" value="RSVP!" style="color:white; background:black; border:0pt" onclick="clearInput()">
 </form>
+
+
 
 <iframe name="hidden_iframe" style="display:none;"></iframe>
 
@@ -166,24 +170,24 @@ if (attendees.value.trim() !== "" && number.value.trim() !== "") {
     
     }
   </script>
+</div>
+<br>
+<br>
 
-<br>
-<br>
+
+
 
 <iframe 
-width="518px" 
-height="1000%" 
-frameborder="0"
-style="background: 8A8AE1; overflow-x: hidden; border: none;"
+
+style="background: 8A8AE1; overflow-x: hidden; border: none; width: 70vw; height: 1000vw; border: 0px; display: block; margin: 0 auto;"
 
 
 
-src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTmOMkiIZTtSEOkSkIxVadfUnBeb6JXVmkRcafULg88bZN3Kk2Ra0yzDKhdLqcpbx31u7piBV-HtnpH/pubhtml?gid=490628751&amp;range=A1:C1000&amp;single=true&amp;widget=true&amp;headers=false&amp;chrome=false"
+src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTmOMkiIZTtSEOkSkIxVadfUnBeb6JXVmkRcafULg88bZN3Kk2Ra0yzDKhdLqcpbx31u7piBV-HtnpH/pubhtml?gid=490628751&amp;range=A1:D1000&amp;single=true&amp;widget=true&amp;headers=false&amp;chrome=false"
 
 ></iframe>
 
 
-</div>
 </center>
  
 
