@@ -39,17 +39,33 @@
 border-radius: 0;
 }
 
+.mainpage {
+  background: #E3E399;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 20px;
+  width: 80vw;
+  box-shadow: 0 6px 0 black;
+}
+
+
 #contactinfo {
-position: fixed;
-bottom:0;
-width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+  border-top: 3px solid black;
 }
 
 
 
 
 body { 
-  background-color: 8A8AE1;
+  background-color: #8A8AE1;
 height: 100vh; 
 	
 
@@ -67,26 +83,18 @@ height: 100vh;
 
 /* text box style */
 
-input[type="text"] {
-      width: 80vw;        /* 80% of the iPhone screen width */
-      height: 12vw;       /* Height also scales with screen width */
-      font-size: 5vw;     /* Text scales with screen width */
-      padding: 2vw;
-      border: 5px solid black;
-      border-radius: 10px;
-      box-sizing: border-box;
-
-    }
-
+input[type="text"],
 input[type="submit"] {
-      width: 80vw;        /* 80% of the iPhone screen width */
-      height: 12vw;       /* Height also scales with screen width */
-      font-size: 5vw;     /* Text scales with screen width */
-      padding: 2vw;
-      border: border:5px solid black;
-      border-radius: 10px;
-      box-sizing: border-box;
-    }
+  width: 70vw;
+  height: auto;
+  padding: 4vw;
+  font-size: 5vw;
+  border: 3px solid black;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 4px 0 black;
+}
+
 
   </style>
 
@@ -176,11 +184,11 @@ Please RSVP below! <br></i>
 <form action=https://docs.google.com/forms/d/e/1FAIpQLScilv7M88wUSrzC3awxnOkVDPtiO_L63pTqcZrJPMHS3fvvmQ/formResponse?pli=1" method="POST" target="hidden_iframe" onsubmit="submitted=true;" style="font-size: 60px; font-family:courier">
 
 How many people will attend? <br>
-  <input type="text" name="entry.689088212" id="Number" placeholder="Enter a number" inputmode="numeric" pattern="[0-9]*">
+  <input type="text" name="entry.689088212" id="Number" placeholder="Enter a number" inputmode="numeric" pattern="[0-9]*" style="font-family:courier">
 
 <br><br>
 What are the names of attendees? <br>
-  <input type="text" name="entry.794166339" id="Attendees" placeholder="Adult 1; Adult 2; Child 1; etc">
+  <input type="text" name="entry.794166339" id="Attendees" placeholder="Adult 1; Adult 2; Child 1; etc" style="font-family:courier">
 <br>
 <br>
   <input type="submit" value="RSVP!" style="color:white; background:black; border:0pt; font-family:courier" onclick="clearInput()">
@@ -225,7 +233,7 @@ if (attendees.value.trim() !== "" && number.value.trim() !== "") {
 
 <iframe 
 
-style="background: 8A8AE1; overflow-x: hidden; border: none; width: 70vw; height: 1000vw; border: 0px; display: block; margin: 0 auto;"
+style="background: #8A8AE1; overflow-x: hidden; border: none; width: 70vw; height: 1000vw; border: 0px; display: block; margin: 0 auto;"
 
 
 
