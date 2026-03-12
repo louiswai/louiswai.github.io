@@ -15,8 +15,8 @@
 
 /* code for snake game */
 .pokeball-btn {
-        width: 120px;
-        height: 120px;
+        width: 90px;
+        height: 90px;
         border-radius: 50%;
         border: 6px solid black;
         background: linear-gradient(to bottom, red 50%, white 50%);
@@ -76,14 +76,14 @@
         background: white;
         border: none;
         border-radius: 8px;
-        font-size: 16px;
+        font-size: 40px;
         cursor: pointer;
     }
 
     #info {
         margin-bottom: 10px;
         text-align: center;
-        font-size: 32px;
+        font-size: 40px;
         max-width: 90vw;
     }
 
@@ -236,13 +236,15 @@ input[type="submit"] {
 
 
 <div id="mainpage" class="mainpage" font-family:courier; font-size:80px">
-<p style="font-size:80px; font-family:courier">
+<p style="font-size:80px; font-family:courier; margin-bottom: 20;">
 
 <b> <u>
 Grey's Birthday Party
 </b> </u>
 
 <br>
+
+</p>
 
 <!-- Code for snake game -->
 
@@ -287,7 +289,7 @@ closeBtn.onclick = () => {
 };
 
 let canvas, ctx;
-let box = 30;
+let box = 45;
 let player, monster;
 let score = 0;
 let vx = 0, vy = 0;
@@ -362,7 +364,7 @@ function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Draw monster as emoji
-    ctx.font = "40px serif";
+    ctx.font = "50px serif";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText("👹", monster.x + box / 2, monster.y + box / 2);
@@ -409,22 +411,28 @@ function setupControls() {
 
 
 
-</p>
 
-<p style="font-size: 60px; font-family:courier; margin-bottom: 20;">
+<p style="font-size: 60px; font-family:courier; margin-top: 20; margin-bottom: 20;">
 <b>Location: </b><a href="https://maps.app.goo.gl/GUjUnfXsF1eT1yXV6">CAS Halls </a><br>
 <b>Date:</b> 20th of June <br>
 <U><b>Time:</b> 11:00 - 13:00 <br></u>
+</p>
+
 <button class="pokeball-btn" id="openGame"></button><br>
+
+<p style="font-size: 60px; font-family:courier; margin-top: 20; margin-bottom: 20;">
 <i>
 There will be lunch! <br>
 There will be Pokemon! <br>
 Siblings are invited! <br>
 Please RSVP by 7th of June below! <br></i>
-<button class="pokeball-btn" id="openGame"></button>
+
 </p>
 
-<p style="font-size: 60px; font-family:courier;">
+<button class="pokeball-btn" id="openGame"></button>
+
+
+<p style="font-size: 60px; font-family:courier; margin-top: 20; margin-bottom: 20;">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1105.7346685564798!2d-0.2025864767844681!3d51.47358204296868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760f9d43226501%3A0x594d9f6cd52deb63!2sCAS%20Halls!5e0!3m2!1sen!2suk!4v1772764528193!5m2!1sen!2suk" width="90%" height="40%" style="border:5px solid black; box-shadow: none; border-radius: 50%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </p>
@@ -432,6 +440,7 @@ Please RSVP by 7th of June below! <br></i>
 <br>
 <button class="pokeball-btn" id="openGame"></button><br>
 
+<p style="font-size: 60px; font-family:courier; margin-top: 20; margin-bottom: 20;">
 
 <!--form for posting comment-->
 
@@ -448,7 +457,7 @@ What are the names of attendees? <br>
 <br>
   <input type="submit" value="RSVP!" style="color:white; background:black; border:0pt; font-family:courier" onclick="clearInput()">
 </form>
-
+</p>
 
 
 <iframe name="hidden_iframe" style="display:none;"></iframe>
