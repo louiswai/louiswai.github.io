@@ -87,6 +87,11 @@
         max-width: 90vw;
     }
 
+#gameCanvas {
+    width: 90vw;
+    height: 50vh;
+}
+
 /* end code for snake game */
 
 
@@ -156,6 +161,10 @@ height: 100vh;
       visibility: hidden;
     }
 
+p {
+    margin-top: 0;
+margin-bottom: 0;
+}
 
 /* text box style */
 
@@ -245,7 +254,7 @@ Grey's Birthday Party
         Desktop: Arrow keys / WASD &nbsp;|&nbsp; Mobile: swipe on the game.
         <br>Score: <span id="scoreDisplay">0</span>
     </div>
-    <canvas id="gameCanvas" width="300" height="300"></canvas>
+    <canvas id="gameCanvas"></canvas>
     <button id="closeBtn">Close Game</button>
 </div>
 
@@ -268,6 +277,10 @@ openGameBtn.onclick = () => {
     startGame();
 };
 
+gameoverlay.addEventListener("touchmove", function(e) {
+    e.preventDefault();
+}, { passive: false });
+
 closeBtn.onclick = () => {
     gameoverlay.style.display = "none";
     stopGame();
@@ -282,6 +295,8 @@ let gameLoop = null;
 
 function startGame() {
     canvas = document.getElementById("gameCanvas");
+canvas.width = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
     ctx = canvas.getContext("2d");
 
     score = 0;
@@ -396,19 +411,26 @@ function setupControls() {
 
 </p>
 
-<p style="font-size: 60px; font-family:courier">
+<p style="font-size: 60px; font-family:courier; margin-bottom: 20;">
 <b>Location: </b><a href="https://maps.app.goo.gl/GUjUnfXsF1eT1yXV6">CAS Halls </a><br>
 <b>Date:</b> 20th of June <br>
-<U><b>Time:</b> 11:00 - 13:00 <br></u><br>
+<U><b>Time:</b> 11:00 - 13:00 <br></u>
+<button class="pokeball-btn" id="openGame"></button><br>
 <i>
 There will be lunch! <br>
 There will be Pokemon! <br>
 Siblings are invited! <br>
 Please RSVP by 7th of June below! <br></i>
+<button class="pokeball-btn" id="openGame"></button>
+</p>
 
+<p style="font-size: 60px; font-family:courier;">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1105.7346685564798!2d-0.2025864767844681!3d51.47358204296868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760f9d43226501%3A0x594d9f6cd52deb63!2sCAS%20Halls!5e0!3m2!1sen!2suk!4v1772764528193!5m2!1sen!2suk" width="90%" height="40%" style="border:5px solid black; box-shadow: none; border-radius: 50%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </p>
+
+<br>
+<button class="pokeball-btn" id="openGame"></button><br>
 
 
 <!--form for posting comment-->
