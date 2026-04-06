@@ -169,6 +169,7 @@ margin-bottom: 0;
 /* text box style */
 
 input[type="text"],
+input[type="button"],
 input[type="submit"] {
   width: 70vw;
   height: auto;
@@ -466,6 +467,23 @@ What are the names of attendees? <br>
 </p>
 
 
+<input 
+  type="button" 
+  value="View Guest List" 
+  style="color:white; background:black; border:0pt; font-family:courier;"
+  onclick="openGuestList()">
+
+
+<script>
+  function openGuestList() {
+    window.open(
+      "https://docs.google.com/spreadsheets/d/e/2PACX-1vTmOMkiIZTtSEOkSkIxVadfUnBeb6JXVmkRcafULg88bZN3Kk2Ra0yzDKhdLqcpbx31u7piBV-HtnpH/pubhtml?gid=490628751&range=B1:C1000&single=true&widget=true&headers=false&chrome=false",
+      "_blank"
+    );
+  }
+</script>
+
+
 <iframe name="hidden_iframe" style="display:none;"></iframe>
 
   <script>
@@ -481,7 +499,7 @@ if (attendees.value.trim() !== "" && number.value.trim() !== "") {
       number.value = "";
     }, 200);
 
-    alert("Thank you for your RSVP. The guest list below takes 10 minutes to update.");
+    alert("Thank you for your RSVP. The guest list below takes 5 minutes to update.");
 
     setTimeout(() => {
       location.reload();
@@ -501,15 +519,7 @@ if (attendees.value.trim() !== "" && number.value.trim() !== "") {
 
 
 
-<iframe 
 
-style="background: #8A8AE1; overflow-x: hidden; border: none; width: 70vw; height: 1000vw; border: 0px; display: block; margin: 0 auto;"
-
-
-
-src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTmOMkiIZTtSEOkSkIxVadfUnBeb6JXVmkRcafULg88bZN3Kk2Ra0yzDKhdLqcpbx31u7piBV-HtnpH/pubhtml?gid=490628751&amp;range=B1:C1000&amp;single=true&amp;widget=true&amp;headers=false&amp;chrome=false"
-
-></iframe>
 
 
 </center>
