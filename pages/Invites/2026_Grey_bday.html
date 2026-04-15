@@ -145,7 +145,7 @@ border-radius: 0;
 
 
 #contactinfo {
-  position: fixed;
+ 
   bottom: 0;
   width: 100%;
   background: white;
@@ -204,24 +204,6 @@ input[type="submit"] {
 
 <body>
 
-
-
-
-
-
-
-
-
-<div id="contactinfo"
-     style="z-index:10; text-align:left; font-size:30px; font-weight:bold; 
-            font-style:italic; font-family:Arial, sans-serif; color:black; 
-            border:none; background:white; width:120%; margin-left:-10px; padding:4px 6px;">
-  
-  <a href="mailto:malt.terrier.1r@icloud.com" style="color:black; text-decoration:underline;">
-    Email Steph and Louis here
-  </a>
-
-</div>
 
 
 
@@ -475,7 +457,7 @@ How many people will attend? <br>
 <br>
 </p>
 What are the names of attendees? <br>
-  <input type="text" name="entry.794166339" id="Attendees" placeholder="Adult 1; Adult 2; Child 1; etc" style="font-family:courier">
+  <input type="text" name="entry.794166339" id="Attendees" placeholder="Adult 1, Adult 2, Child 1; etc" style="font-family:courier">
 
 <br>
 </form>
@@ -518,11 +500,9 @@ if (attendees.value.trim() !== "" && number.value.trim() !== "") {
       number.value = "";
     }, 200);
 
-    alert("Thank you for your RSVP. The guest list below takes 5 minutes to update.");
+    alert("Thank you for your RSVP. The guest list takes up to 5 minutes to update.");
 
-    setTimeout(() => {
-      location.reload();
-    }, 250000);
+    
 
   } else {
     alert("Please provide both the number of attendees and the names of the attendees.");
@@ -593,7 +573,7 @@ if (attendees.value.trim() !== "" && number.value.trim() !== "") {
 </div>
 <br>
 <br>
-
+<br>
 
 
 
@@ -601,6 +581,18 @@ if (attendees.value.trim() !== "" && number.value.trim() !== "") {
 
 
 </center>
+
+
+<div id="contactinfo"
+     style="z-index:10; text-align:left; font-size:30px; font-weight:bold; 
+            font-style:italic; font-family:Arial, sans-serif; color:black; 
+            border:none; background:white; width:120%; margin-left:-10px; padding:4px 6px;">
+  
+  <a href="mailto:malt.terrier.1r@icloud.com" style="color:black; text-decoration:underline;">
+    Email Steph and Louis here
+  </a>
+
+</div>
  
 
 </body>
