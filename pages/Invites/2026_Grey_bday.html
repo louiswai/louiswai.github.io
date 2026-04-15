@@ -13,7 +13,21 @@
 
 <style type="text/css">
 
-/* code for snake game */
+.cal-btn {
+  display: inline-block;
+  margin: 6px;
+  padding: 12px 20px;
+  font-size: 40px;
+  font-family: courier;
+  font-weight: bold;
+  background: black;
+  color: white;
+  border: 0;
+  border-radius: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .pokeball-btn {
         width: 90px;
         height: 90px;
@@ -452,26 +466,31 @@ Please RSVP below by 7th of June! <br></i>
 <!--form for posting comment-->
 
 
-<form action=https://docs.google.com/forms/d/e/1FAIpQLScilv7M88wUSrzC3awxnOkVDPtiO_L63pTqcZrJPMHS3fvvmQ/formResponse?pli=1" method="POST" target="hidden_iframe" onsubmit="submitted=true;" style="font-size: 60px; font-family:courier">
+<form id="rsvpForm" action="https://docs.google.com/forms/d/e/1FAIpQLScilv7M88wUSrzC3awxnOkVDPtiO_L63pTqcZrJPMHS3fvvmQ/formResponse?pli=1" method="POST" target="hidden_iframe" onsubmit="submitted=true;" style="font-size: 60px; font-family:courier">
 
 How many people will attend? <br>
   <input type="text" name="entry.689088212" id="Number" placeholder="Enter a number" inputmode="numeric" pattern="[0-9]*" style="font-family:courier">
-
-<br><br>
+<br>
+<p style="font-size: 30px; font-family:courier; margin-top: 0; margin-bottom: 0;">
+<br>
+</p>
 What are the names of attendees? <br>
   <input type="text" name="entry.794166339" id="Attendees" placeholder="Adult 1; Adult 2; Child 1; etc" style="font-family:courier">
+
 <br>
-<br>
-  <input type="submit" value="RSVP!" style="color:white; background:black; border:0pt; font-family:courier" onclick="clearInput()">
 </form>
+
+<p style="font-size: 60px; font-family:courier; margin-top: 20; margin-bottom: 20;">
+<div style="display:flex; flex-direction:column; align-items:center; gap:30px; margin-top:30px; margin-bottom:30px;">
+  <input type="submit" form="rsvpForm" value="RSVP!" style="color:white; background:black; border:0pt; font-family:courier" onclick="clearInput()">
+  <input type="button" value="View Guest List" style="color:white; background:black; border:0pt; font-family:courier;" onclick="openGuestList()">
+  <input type="button" value="Add to My Calendar" style="color:white; background:black; border:0pt; font-family:courier;" onclick="showCalModal()">
+</div>
+
+
+
 </p>
 
-
-<input 
-  type="button" 
-  value="View Guest List" 
-  style="color:white; background:black; border:0pt; font-family:courier;"
-  onclick="openGuestList()">
 
 
 <script>
@@ -512,6 +531,65 @@ if (attendees.value.trim() !== "" && number.value.trim() !== "") {
     
     }
   </script>
+
+
+
+
+
+
+
+<div id="calModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center;">
+  <div style="background:white; border-radius:20px; padding:40px; text-align:center; width:80vw; max-width:400px;">
+    <p style="font-size:40px; font-family:courier; font-weight:bold; margin-bottom:30px;">Add to Calendar</p>
+
+    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Grey%27s+Birthday+Party&dates=20260620T100000Z/20260620T120000Z&details=http://louiswai.github.io/pages/Invites/2026_Grey_bday.html&location=CAS Halls, 18b Parsons Grn, London SW6 4TS" target="_blank">
+      <input type="button" value="Google" style="color:white; background:black; border:0pt; font-family:courier; display:block; width:100%; margin-bottom:16px;">
+    </a>
+
+    <input type="button" value="Apple" style="color:white; background:black; border:0pt; font-family:courier; display:block; width:100%; margin-bottom:16px;" onclick="downloadICS()">
+
+    <a href="https://outlook.live.com/calendar/0/deeplink/compose?subject=Grey%27s+Birthday+Party&startdt=2026-06-20T11:00:00&enddt=2026-06-20T13:00:00&body=http://louiswai.github.io/pages/Invites/2026_Grey_bday.html&location=CAS Halls, 18b Parsons Grn, London SW6 4TS" target="_blank">
+      <input type="button" value="Outlook" style="color:white; background:black; border:0pt; font-family:courier; display:block; width:100%; margin-bottom:16px;">
+    </a>
+
+    <input type="button" value="Close" style="color:black; background:white; border:2px solid black; font-family:courier; display:block; width:100%; margin-top:10px;" onclick="hideCalModal()">
+  </div>
+</div>
+
+<script>
+  function showCalModal() {
+    const m = document.getElementById("calModal");
+    m.style.display = "flex";
+  }
+  function hideCalModal() {
+    const m = document.getElementById("calModal");
+    m.style.display = "none";
+  }
+  function downloadICS() {
+    const ics = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "BEGIN:VEVENT",
+      "DTSTART:20260620T110000",
+      "DTEND:20260620T130000",
+      "SUMMARY:Grey's Birthday Party",
+      "DESCRIPTION:http://louiswai.github.io/pages/Invites/2026_Grey_bday.html",
+      "LOCATION:CAS Halls\\, 18b Parsons Grn\\, London SW6 4TS",
+      "END:VEVENT",
+      "END:VCALENDAR"
+    ].join("\r\n");
+    const blob = new Blob([ics], { type: "text/calendar" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "greys_birthday_party.ics";
+    a.click();
+    URL.revokeObjectURL(url);
+    hideCalModal();
+  }
+</script>
+
+
 </div>
 <br>
 <br>
